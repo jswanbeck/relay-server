@@ -7,6 +7,7 @@ TCP clients (e.g. telnet) will interface with the echo servers by connecting to 
 
 The relay server accepts the argument "port" and the echo server accepts the argument "relay" as shown in this example workflow:
 
+```
 $ ./relay -port 8000
 > Relay server started on localhost:8000
 
@@ -16,5 +17,6 @@ $ ./echoserver -relay localhost:8000
 $ telnet localhost 8001
 hello world!
 > hello world!
+```
 
 There can be multiple echo servers running at once, and multiple TCP clients connected to each echo server.
